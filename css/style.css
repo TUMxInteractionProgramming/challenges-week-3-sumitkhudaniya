@@ -27,11 +27,40 @@ button, strong {
 /* APP BAR */
 
 /* #4 #sweat address both #app-bar s */
-h1 {
+.header {
     background-color: #3F51B5;
     color: white;
+    font-size: 20px;
+    height: 65px;
+    position: fixed;
+    width: 60%;
+    
+        
 }
-
+.header img {
+    margin-top: 9px;
+    margin-left: 16px;
+}
+.header #head {
+    position: absolute;
+    top: 18px;
+}
+.header #chathead {
+    position: absolute;
+    top: 18px;
+    left: 2.5%;
+    
+    
+}
+.header #headbar {
+    position: absolute;
+    top: 11px;
+    right: 2%;
+}
+#appbarlocation {
+    color: white;
+    
+}
 
 /* CHANNELS LIST */
 
@@ -41,6 +70,9 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    
+    margin-top: 65px;
+    
 }
 
 li {
@@ -61,7 +93,18 @@ li.selected {
 
 li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
+    position: absolute;
+    right: 45px;
     vertical-align: middle;
+}
+
+.arrowimage {
+    height: 18px;
+    vertical-align: middle;
+    margin-left: 4px;
+    position: absolute;
+    right: 20px;
+    
 }
 
 /* TAB BAR */
@@ -72,7 +115,14 @@ li img {
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
-}
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    
+    display: flex;
+    padding-top: auto;    
+    
+  }
 
 /* #4 add styles to #tab-bar #buttons */
 #tab-bar button {
@@ -94,7 +144,9 @@ li img {
 
 /* #4 the selected #tab-bar #button is #highlighted */
 #tab-bar button.selected {
+    
     color: #3F51B5;
+    
     border-bottom: 4px solid #3F51B5;
 }
 
@@ -115,6 +167,9 @@ li img {
 
 .message h3 {
     font-size: medium;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .message h3 em {
@@ -130,16 +185,68 @@ li img {
 .message p {
     background-color: white;
     padding: 16px;
+    position: relative;
 }
 
-.message button {
+.message .msg button {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
 }
 
 /* #4 left align own #messages using #margins */
 .message.own {
     margin-left: 17.5%;
+    margin-top: 68px;
 }
 
+/* split screen layout ,  channel area*/
+
+#channels {
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    right: 60%;
+    top: 0px;
+    height: 100%;
+    overflow-y: auto;
+    
+    
+
+}
+/* chat area */
+#chat {
+    position: absolute;
+    left: 40%;
+    right: 0%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* emojis */
+#emojis {
+    background-color: white;
+    padding-bottom: 200px;
+    width: 150px;
+    padding-top: 16px;
+    padding-left: 16px;
+    border: 1px solid grey;
+    position: fixed;
+    bottom: 70px;
+    
+    
+}
+
+/* chatbar */
+#chat-bar {
+    background-color: white;
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0px;
+    
+}
